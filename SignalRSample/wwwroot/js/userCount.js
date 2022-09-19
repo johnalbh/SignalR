@@ -16,6 +16,7 @@ function newWindowLoadOnClient() {
 function fulfilled() {
     // do something on start
     console.log("Connection Ok");
+    newWindowLoadOnClient();
 }
 function rejected() {
     //rejected logs
