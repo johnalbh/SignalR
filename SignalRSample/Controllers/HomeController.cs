@@ -20,6 +20,7 @@ namespace SignalRSample.Controllers
 
         public async Task<IActionResult> DeathlyHallows(string type)
         {
+
             if (SD.DealthyHallowRace.ContainsKey(type))
             {
                 SD.DealthyHallowRace[type]++;
