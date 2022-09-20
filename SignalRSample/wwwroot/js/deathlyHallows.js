@@ -17,8 +17,12 @@ connectionDeathlyHallows.on("updateDeathlyHallowCount", (cloak, stone, wand) => 
 // start connection
 function fulfilled() {
     // do something on start
+    connectionDeathlyHallows.invoke("GetRaceStatus").then((raceCounter) => {
+        cloakSpan.innerText = raceCounter.cloak.toString();
+        stoneSpan.innerText = raceCounter.stone.toString();
+        wandSpan.innerText = raceCounter.wand.toString();
+    })
     console.log("Connection Ok");
-    newWindowLoadOnClient();
 }
 function rejected() {
     //rejected logs
